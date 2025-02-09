@@ -1,4 +1,4 @@
-ter/* Общие стили */
+/* Общие стили */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -85,8 +85,9 @@ header {
     align-items: center;
     justify-content: center;
     font: normal 40px/50px Montserrat, sans-serif;
+    font-size: 28px;
     color: #ffffff;
-    text-align: center;
+    text-align: left;
     flex-direction: row; /* Размещаем текст в строку */
     position: relative;
     height: 100px; /* Ограничиваем высоту */
@@ -101,8 +102,8 @@ header {
     overflow: hidden;
     display: inline-block;
     height: 50px;
-    width: 1000px; /* Фиксированная ширина, чтобы текст не выходил за границы */
-    text-align: center;
+    width: 768px; /* Фиксированная ширина, чтобы текст не выходил за границы */
+    text-align: left;
     position: relative;
 }
 
@@ -125,40 +126,35 @@ header {
     60% { transform: translateY(-150px); }
     80% { transform: translateY(-200px); }
 }
+
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
-    /* Центрируем текст на мобильных устройствах */
     .Iam {
-        font-size: 28px;
-        line-height: 40px;
-        height: 72px;
-        position: absolute;
-        top: 50%; /* Центрируем по вертикали */
-        left: 50%; /* Центрируем по горизонтали */
-        transform: translate(-50%, -50%); /* Центрируем */
-        justify-content: center; /* Центрируем по вертикали */
-        align-items: center; /* Центрируем по горизонтали */
+        font-size: 24px;  /* Размер шрифта для мобильных устройств */
+        line-height: 32px; /* Корректируем межстрочное расстояние */
+        height: auto;  /* Убираем фиксированную высоту */
+        padding: 10px;  /* Добавляем немного отступов для корректного отображения */
     }
 
     .Iam b {
-        height: auto;
+        height: auto; /* Убираем фиксированную высоту */
     }
 
     .Iam .innerIam {
-        font-size: 28px;
-        animation: move 10s infinite ease-in-out;
+        font-size: 24px; /* Уменьшаем шрифт анимированного текста */
+        white-space: nowrap;  /* Запрещаем перенос слов */
     }
 
-    /* Исправленная анимация для мобильных устройств */
+    /* Правила для анимации */
     @keyframes move {
-        0% { transform: translateY(0); }
-        20% { transform: translateY(-40px); }
-        40% { transform: translateY(-80px); }
-        60% { transform: translateY(-120px); }
-        80% { transform: translateY(-160px); }
+        0% { transform: translateX(-50%) translateY(0); }
+        20% { transform: translateX(-50%) translateY(-40px); }
+        40% { transform: translateX(-50%) translateY(-80px); }
+        60% { transform: translateX(-50%) translateY(-120px); }
+        80% { transform: translateX(-50%) translateY(-160px); }
+        100% { transform: translateX(-50%) translateY(-200px); }
     }
 }
-
 .feature {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -203,4 +199,3 @@ footer {
     background: #004d3d;
     padding: 20px;
     height: 30px;
-}
