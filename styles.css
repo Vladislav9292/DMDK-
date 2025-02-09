@@ -25,34 +25,86 @@ header {
     font-weight: bold;
 }
 
+
+/* Главный экран */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    background: url('office.jpg') center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+    z-index: -2;
+}
+
+#hero-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.cta-btn {
+    padding: 15px 30px; /* Увеличиваем внутренние отступы */
+    font-size: 18px; /* Увеличиваем шрифт */
+    width: 300px; /* Фиксированная ширина */
+    max-width: 100%; /* Адаптивность кнопки */
+    background-color: #00C896; /* Цвет кнопки */
+    color: white; /* Цвет текста на кнопке */
+    border: none; /* Убираем обводку */
+    border-radius: 5px; /* Скругляем углы */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.cta-btn:hover {
+    background-color: #009f7f; /* Цвет при наведении */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
 /* Всплывающий текст */
 .Iam {
     display: flex;
     align-items: center;
     justify-content: center;
     font: normal 40px/50px Montserrat, sans-serif;
+    font-size: 28px;
     color: #ffffff;
-    text-align: center;
-    flex-direction: row;
-    position: absolute;
-    top: 50%; /* Центрируем по вертикали */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем на 50% размера элемента */
-    height: 72px; /* Высота элемента */
-    overflow: hidden; /* Запрещаем выход текста за границы */
+    text-align: left;
+    flex-direction: row; /* Размещаем текст в строку */
+    position: relative;
+    height: 100px; /* Ограничиваем высоту */
 }
 
 .Iam p {
     margin: 0;
-    white-space: nowrap; /* Запрещаем перенос слов */
+    white-space: nowrap;
 }
 
 .Iam b {
     overflow: hidden;
     display: inline-block;
     height: 50px;
+    width: 768px; /* Фиксированная ширина, чтобы текст не выходил за границы */
+    text-align: left;
     position: relative;
-    white-space: nowrap; /* Не даём тексту переноситься */
 }
 
 .Iam .innerIam {
@@ -67,7 +119,6 @@ header {
     animation: move 10s infinite ease-in-out;
 }
 
-/* Анимация */
 @keyframes move {
     0% { transform: translateY(0); }
     20% { transform: translateY(-50px); }
@@ -78,29 +129,17 @@ header {
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
-    /* Центрируем текст на мобильных устройствах */
     .Iam {
         font-size: 28px;
+        text-align: left;
         line-height: 40px;
         height: 72px;
-        position: absolute;
-        top: 50%; /* Центрируем по вертикали */
-        left: 50%; /* Центрируем по горизонтали */
-        transform: translate(-50%, -50%); /* Центрируем */
-        justify-content: center; /* Центрируем по вертикали */
-        align-items: center; /* Центрируем по горизонтали */
     }
 
     .Iam b {
-        height: auto;
+        height: 40px;
     }
 
-    .Iam .innerIam {
-        font-size: 28px;
-        animation: move 10s infinite ease-in-out;
-    }
-
-    /* Исправленная анимация для мобильных устройств */
     @keyframes move {
         0% { transform: translateY(0); }
         20% { transform: translateY(-40px); }
@@ -109,3 +148,48 @@ header {
         80% { transform: translateY(-160px); }
     }
 }
+
+.feature {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover {
+    transform: scale(1.1);
+}
+
+/* Форма */
+.contact {
+    padding: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #00c896;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+/* Футер */
+footer {
+    background: #004d3d;
+    padding: 20px;
+    height: 30px;
