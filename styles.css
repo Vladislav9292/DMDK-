@@ -86,7 +86,7 @@ header {
     justify-content: center;
     font: normal 40px/50px Montserrat, sans-serif;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
     flex-direction: row; /* Размещаем текст в строку */
     position: relative;
     height: 100px; /* Ограничиваем высоту */
