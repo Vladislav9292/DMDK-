@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ДМДК+</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/inputmask.min.js"></script>
     <script defer src="script.js"></script>
-    </head>
+</head>
 <body>
 
-    <!-- Хедер -->
-    <header>
-        <div class="logo">ДМДК+</div>
-        </header>
+
+
 
     <!-- Главный экран -->
     <section class="hero">
@@ -23,21 +23,42 @@
         <div class="hero-content">
             <h1>Эффективное взаимодействие с ГИИС ДМДК</h1>
             <p>Автоматизация. Снижение ошибок. Экономия времени.</p>
-            <button class="cta-btn">Оставить заявку</button>
+            <button onclick="scrollToForm()" class="cta-btn">ОСТАВИТЬ ЗАЯВКУ</button>
         </div>
     </section>
+<!-- Блок "Что мы предлагаем?" -->
+    <section class="offer">
+       
+<div class="Iam">
+
+
+<b>
+  <div class="innerIam">
+    Регистрация в системе<br /> 
+    Постановка на спецучет<br />
+    Внесение изменений в карту спецучета<br />
+    Анализ и клеймение изделий<br />
+    Ежедневный учет
+    </div>
+</b>
+
+</div>
+
+
+    </section>
+
    
     <!-- Форма заявки -->
     <section class="contact">
         <h2>Оставить заявку</h2>
-        <form action="send_mail.php" method="post">
+        <form id="contact-form" action="send_mail.php" method="post">
             <label for="name"></label>
             <input type="text" placeholder="Имя" required>
             <label for="phone"></label>
             <input type="text" name="phone" placeholder="Телефон" required>
             <label for="message"></label>
             <textarea placeholder="Комментарий"></textarea>
-            <button type="submit">Отправить</button>
+            <button type="submit" class="cta-btn">ОТПРАВИТЬ</button>
         </form>
     </section>
 
@@ -46,5 +67,12 @@
         <p>© 2025 ДМДК+. Все права защищены.</p>
     </footer>
 
+    <script>
+        // Функция прокрутки страницы к форме
+        function scrollToForm() {
+            const form = document.getElementById('contact-form');
+            form.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
