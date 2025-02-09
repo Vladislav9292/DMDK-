@@ -126,6 +126,34 @@ header {
     80% { transform: translateY(-200px); }
 }
 
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .Iam {
+        font-size: 24px;  /* Размер шрифта для мобильных устройств */
+        line-height: 32px; /* Корректируем межстрочное расстояние */
+        height: auto;  /* Убираем фиксированную высоту */
+        padding: 10px;  /* Добавляем немного отступов для корректного отображения */
+    }
+
+    .Iam b {
+        height: auto; /* Убираем фиксированную высоту */
+    }
+
+    .Iam .innerIam {
+        font-size: 24px; /* Уменьшаем шрифт анимированного текста */
+        white-space: nowrap;  /* Запрещаем перенос слов */
+    }
+
+    /* Правила для анимации */
+    @keyframes move {
+        0% { transform: translateX(-50%) translateY(0); }
+        20% { transform: translateX(-50%) translateY(-40px); }
+        40% { transform: translateX(-50%) translateY(-80px); }
+        60% { transform: translateX(-50%) translateY(-120px); }
+        80% { transform: translateX(-50%) translateY(-160px); }
+        100% { transform: translateX(-50%) translateY(-200px); }
+    }
+}
 .feature {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -170,32 +198,4 @@ footer {
     background: #004d3d;
     padding: 20px;
     height: 30px;
-}
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .Iam {
-        font-size: 24px;  /* Размер шрифта для мобильных устройств */
-        line-height: 32px; /* Корректируем межстрочное расстояние */
-        height: auto;  /* Убираем фиксированную высоту */
-        padding: 10px;  /* Добавляем немного отступов для корректного отображения */
-    }
-
-    .Iam b {
-        height: auto; /* Убираем фиксированную высоту */
-    }
-
-    .Iam .innerIam {
-        font-size: 24px; /* Уменьшаем шрифт анимированного текста */
-        white-space: nowrap;  /* Запрещаем перенос слов */
-    }
-
-    /* Правила для анимации */
-    @keyframes move {
-        0% { transform: translateX(-50%) translateY(0); }
-        20% { transform: translateX(-50%) translateY(-40px); }
-        40% { transform: translateX(-50%) translateY(-80px); }
-        60% { transform: translateX(-50%) translateY(-120px); }
-        80% { transform: translateX(-50%) translateY(-160px); }
-        100% { transform: translateX(-50%) translateY(-200px); }
-    }
 }
