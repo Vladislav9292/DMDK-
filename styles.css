@@ -127,6 +127,7 @@ header {
 }
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
+    /* Центрируем текст на мобильных устройствах */
     .Iam {
         font-size: 28px;
         line-height: 40px;
@@ -137,13 +138,18 @@ header {
         transform: translate(-50%, -50%); /* Центрируем */
         justify-content: center; /* Центрируем по вертикали */
         align-items: center; /* Центрируем по горизонтали */
-
     }
 
     .Iam b {
-        height: 40px;
+        height: auto;
     }
 
+    .Iam .innerIam {
+        font-size: 28px;
+        animation: move 10s infinite ease-in-out;
+    }
+
+    /* Исправленная анимация для мобильных устройств */
     @keyframes move {
         0% { transform: translateY(0); }
         20% { transform: translateY(-40px); }
