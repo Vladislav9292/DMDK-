@@ -1,4 +1,4 @@
-/* Общие стили */
+ter/* Общие стили */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -102,7 +102,7 @@ header {
     display: inline-block;
     height: 50px;
     width: 768px; /* Фиксированная ширина, чтобы текст не выходил за границы */
-    text-align: left;
+    text-align: center;
     position: relative;
 }
 
