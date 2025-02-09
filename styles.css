@@ -1,4 +1,5 @@
 /* Общие стили */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,7 +8,9 @@ body {
     text-align: center;
 }
 
+
 /* Хедер */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -27,6 +30,7 @@ header {
 
 
 /* Главный экран */
+
 .hero {
     height: 100vh;
     display: flex;
@@ -58,20 +62,31 @@ header {
 }
 
 .cta-btn {
-    padding: 15px 30px; /* Увеличиваем внутренние отступы */
-    font-size: 18px; /* Увеличиваем шрифт */
-    width: 300px; /* Фиксированная ширина */
-    max-width: 100%; /* Адаптивность кнопки */
-    background-color: #00C896; /* Цвет кнопки */
-    color: white; /* Цвет текста на кнопке */
-    border: none; /* Убираем обводку */
-    border-radius: 5px; /* Скругляем углы */
-    cursor: pointer; /* Курсор в виде руки при наведении */
-    transition: background-color 0.3s; /* Плавный переход цвета */
+    padding: 15px 30px;
+    /* Увеличиваем внутренние отступы */
+    font-size: 18px;
+    /* Увеличиваем шрифт */
+    width: 300px;
+    /* Фиксированная ширина */
+    max-width: 100%;
+    /* Адаптивность кнопки */
+    background-color: #00C896;
+    /* Цвет кнопки */
+    color: white;
+    /* Цвет текста на кнопке */
+    border: none;
+    /* Убираем обводку */
+    border-radius: 5px;
+    /* Скругляем углы */
+    cursor: pointer;
+    /* Курсор в виде руки при наведении */
+    transition: background-color 0.3s;
+    /* Плавный переход цвета */
 }
 
 .cta-btn:hover {
-    background-color: #009f7f; /* Цвет при наведении */
+    background-color: #009f7f;
+    /* Цвет при наведении */
 }
 
 .hero-content {
@@ -79,7 +94,9 @@ header {
     z-index: 1;
 }
 
+
 /* Всплывающий текст */
+
 .Iam {
     display: flex;
     align-items: center;
@@ -88,9 +105,11 @@ header {
     font-size: 28px;
     color: #ffffff;
     text-align: left;
-    flex-direction: row; /* Размещаем текст в строку */
+    flex-direction: row;
+    /* Размещаем текст в строку */
     position: relative;
-    height: 100px; /* Ограничиваем высоту */
+    height: 100px;
+    /* Ограничиваем высоту */
 }
 
 .Iam p {
@@ -102,7 +121,8 @@ header {
     overflow: hidden;
     display: inline-block;
     height: 50px;
-    width: 768px; /* Фиксированная ширина, чтобы текст не выходил за границы */
+    width: 768px;
+    /* Фиксированная ширина, чтобы текст не выходил за границы */
     text-align: left;
     position: relative;
 }
@@ -114,20 +134,31 @@ header {
     white-space: nowrap;
     top: 0;
     left: 0;
-  
     /* Анимация */
     animation: move 10s infinite ease-in-out;
 }
 
 @keyframes move {
-    0% { transform: translateY(0); }
-    20% { transform: translateY(-50px); }
-    40% { transform: translateY(-100px); }
-    60% { transform: translateY(-150px); }
-    80% { transform: translateY(-200px); }
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-50px);
+    }
+    40% {
+        transform: translateY(-100px);
+    }
+    60% {
+        transform: translateY(-150px);
+    }
+    80% {
+        transform: translateY(-200px);
+    }
 }
 
+
 /* Адаптация для мобильных устройств */
+
 @media (max-width: 768px) {
     /* Центрируем текст на мобильных устройствах */
     .Iam {
@@ -135,30 +166,42 @@ header {
         line-height: 40px;
         height: 72px;
         position: absolute;
-        top: 50%; /* Центрируем по вертикали */
-        left: 50%; /* Центрируем по горизонтали */
-        transform: translate(-50%, -50%); /* Центрируем */
-        justify-content: center; /* Центрируем по вертикали */
-        align-items: center; /* Центрируем по горизонтали */
+        top: 50%;
+        /* Центрируем по вертикали */
+        left: 50%;
+        /* Центрируем по горизонтали */
+        transform: translate(-50%, -50%);
+        /* Центрируем */
+        justify-content: center;
+        /* Центрируем по вертикали */
+        align-items: center;
+        /* Центрируем по горизонтали */
     }
-
     .Iam b {
         height: auto;
     }
-
     .Iam .innerIam {
         font-size: 28px;
         animation: move 10s infinite ease-in-out;
     }
-
     /* Исправленная анимация для мобильных устройств */
     @keyframes move {
-        0% { transform: translateY(0); }
-        20% { transform: translateY(-40px); }
-        40% { transform: translateY(-80px); }
-        60% { transform: translateY(-120px); }
-        80% { transform: translateY(-160px); }
-    }
+        0% {
+            transform: translateY(0);
+        }
+        20% {
+            transform: translateY(-40px);
+        }
+        40% {
+            transform: translateY(-80px);
+        }
+        60% {
+            transform: translateY(-120px);
+        }
+        80% {
+            transform: translateY(-160px);
+        }
+    }
 }
 
 .feature {
@@ -172,7 +215,9 @@ header {
     transform: scale(1.1);
 }
 
+
 /* Форма */
+
 .contact {
     padding: 50px;
 }
@@ -184,7 +229,8 @@ form {
     margin: auto;
 }
 
-input, textarea {
+input,
+textarea {
     margin: 10px 0;
     padding: 10px;
     border: none;
@@ -200,7 +246,9 @@ button {
     font-size: 16px;
 }
 
+
 /* Футер */
+
 footer {
     background: #004d3d;
     padding: 20px;
