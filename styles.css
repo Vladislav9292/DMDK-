@@ -129,9 +129,15 @@ header {
 @media (max-width: 768px) {
     .Iam {
         font-size: 28px;
-        text-align: left;
         line-height: 40px;
         height: 72px;
+        position: absolute;
+        top: 50%; /* Центрируем по вертикали */
+        left: 50%; /* Центрируем по горизонтали */
+        transform: translate(-50%, -50%); /* Центрируем */
+        justify-content: center; /* Центрируем по вертикали */
+        align-items: center; /* Центрируем по горизонтали */
+
     }
 
     .Iam b {
