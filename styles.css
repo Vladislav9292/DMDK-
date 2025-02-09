@@ -128,33 +128,27 @@ header {
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
-    /* Применяем flexbox для более точного центрирования */
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-
     .Iam {
-        font-size: 28px;
-        line-height: 40px;
-        height: 80px;
-        width: 90%; /* Устанавливаем ширину 90% от экрана */
-        white-space: nowrap;
+        font-size: 28px; /* Уменьшаем размер шрифта */
+        line-height: 40px; /* Корректируем межстрочное расстояние */
+        height: auto; /* Убираем фиксированную высоту */
     }
 
     .Iam b {
-        height: 40px;
+        height: auto; /* Убираем фиксированную высоту для тега <b> */
+    }
+
+    .Iam .innerIam {
+        font-size: 28px; /* Уменьшаем размер шрифта внутри анимированного текста */
     }
 
     @keyframes move {
-        0% { transform: translateY(0); }
-        20% { transform: translateY(-40px); }
-        40% { transform: translateY(-80px); }
-        60% { transform: translateY(-120px); }
-        80% { transform: translateY(-160px); }
+        0% { transform: translateX(-50%) translateY(0); }
+        20% { transform: translateX(-50%) translateY(-40px); }
+        40% { transform: translateX(-50%) translateY(-80px); }
+        60% { transform: translateX(-50%) translateY(-120px); }
+        80% { transform: translateX(-50%) translateY(-160px); }
+        100% { transform: translateX(-50%) translateY(-200px); }
     }
 }
 
