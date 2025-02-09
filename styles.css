@@ -57,6 +57,23 @@ header {
     z-index: -1;
 }
 
+.cta-btn {
+    padding: 15px 30px; /* Увеличиваем внутренние отступы */
+    font-size: 18px; /* Увеличиваем шрифт */
+    width: 300px; /* Фиксированная ширина */
+    max-width: 100%; /* Адаптивность кнопки */
+    background-color: #00C896; /* Цвет кнопки */
+    color: white; /* Цвет текста на кнопке */
+    border: none; /* Убираем обводку */
+    border-radius: 5px; /* Скругляем углы */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.cta-btn:hover {
+    background-color: #009f7f; /* Цвет при наведении */
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
@@ -69,6 +86,95 @@ header {
     gap: 20px;
     padding: 50px 0;
 }
+
+body {
+  background: #0f0f10;
+}
+
+.Iam {
+  padding: 2em 5em;
+  font: normal 40px/50px Montserrat, sans-serif;
+  color: #ffffff;
+}
+.Iam p {
+  height: 50px;
+  float: left;
+  margin-right: 0.3em;
+}
+.Iam b {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  left: 305px;
+  top: 1px;
+}
+.Iam .innerIam {
+  display: inline-block;
+  color: #009b77;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+
+
+/*animation*/
+-webkit-animation:move 10s;
+   -moz-animation:move 10s;
+    -ms-animation:move 10s;
+     -o-animation:move 10s;
+        animation:move 10s;
+/*animation-iteration-count*/
+-webkit-animation-iteration-count:infinite;
+   -moz-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+     -o-animation-iteration-count:infinite;
+        animation-iteration-count:infinite;
+/*animation-delay*/
+-webkit-animation-delay:5s;
+   -moz-animation-delay:3s;
+    -ms-animation-delay:3s;
+     -o-animation-delay:3s;
+        animation-delay:3s;
+}
+@keyframes move{
+0%  { top: 0px; }
+20% { top: -50px; }
+40% { top: -100px; }
+60% { top: -150px; }
+80% { top: -200px; }
+}
+
+@-webkit-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-moz-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-o-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+
+
 
 .feature {
     background: rgba(255, 255, 255, 0.1);
@@ -113,4 +219,5 @@ button {
 footer {
     background: #004d3d;
     padding: 20px;
+    height: 30px;
 }
