@@ -127,9 +127,10 @@ header {
 }
 
 /* Адаптация для мобильных устройств */
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     .Iam {
         font-size: 28px;
+        text-align: center;
         line-height: 40px;
         height: 72px;
     }
