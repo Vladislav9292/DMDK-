@@ -101,7 +101,7 @@ header {
     overflow: hidden;
     display: inline-block;
     height: 50px;
-    width: 1100px; /* Фиксированная ширина, чтобы текст не выходил за границы */
+    width: 768px; /* Фиксированная ширина, чтобы текст не выходил за границы */
     text-align: left;
     position: relative;
 }
