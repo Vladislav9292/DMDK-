@@ -1,3 +1,4 @@
+
 // Анимация точек, соединенных линиями
 const canvas = document.getElementById('hero-animation');
 const ctx = canvas.getContext('2d');
@@ -77,9 +78,4 @@ window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
     particlesArray.length = 0;
     createParticles();
-});
-
-// Маска для ввода номера телефона
-document.addEventListener("DOMContentLoaded", function () {
-    Inputmask("+7 (999) 999-99-99").mask('input[name="phone"]');
 });
