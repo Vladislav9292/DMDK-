@@ -12,13 +12,14 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background: rgba(0, 128, 96, 0.9);
+    background: transparent;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 10;
 }
+
 
 .logo {
     font-size: 35px;
@@ -79,73 +80,103 @@ header {
     z-index: 1;
 }
 
-/* Всплывающий текст */
-.Iam {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font: normal 40px/50px Montserrat, sans-serif;
-    font-size: 28px;
-    color: #ffffff;
-    text-align: left;
-    flex-direction: row; /* Размещаем текст в строку */
-    position: relative;
-    height: 100px; /* Ограничиваем высоту */
-}
-
-.Iam p {
-    margin: 0;
-    white-space: nowrap;
-}
-
-.Iam b {
+/* Карусель */
+.accordion {
+    width: 100%;
+    height: 70vh; /* На всю высоту экрана */
     overflow: hidden;
-    display: inline-block;
-    height: 50px;
-    width: 768px; /* Фиксированная ширина, чтобы текст не выходил за границы */
-    text-align: left;
+    margin: 0;
+    display: flex; /* Используем flex вместо таблицы */
+}
+
+/* Контейнер слайдов */
+.accordion ul {
+    width: 100%;
+    display: flex; /* Делаем элементы в ряд */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Элементы карусели */
+.accordion ul li {
+    flex: 1; /* Равномерное распределение */
+    height: 100vh; /* Высота на весь экран */
+    background-size: cover;
+    background-position: center;
+    transition: all 500ms ease;
     position: relative;
 }
 
-.Iam .innerIam {
-    display: inline-block;
-    color: #00ce9e;
-    position: absolute;
-    white-space: nowrap;
-    top: 0;
-    left: 0;
-  
-    /* Анимация */
-    animation: move 10s infinite ease-in-out;
+/* Контент внутри */
+.accordion ul li div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-@keyframes move {
-    0% { transform: translateY(0); }
-    20% { transform: translateY(-50px); }
-    40% { transform: translateY(-100px); }
-    60% { transform: translateY(-150px); }
-    80% { transform: translateY(-200px); }
+/* Ссылка */
+.accordion ul li div a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    transition: all 400ms ease;
 }
 
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .Iam {
-        font-size: 28px;
-        text-align: left;
-        line-height: 40px;
-        height: 72px;
+/* Заголовок и текст */
+.accordion ul li div a h2, .accordion ul li div a p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 400ms ease;
+}
+
+/* Фоновые изображения */
+.accordion ul li:nth-child(1) { background-image: url("image1.jpg"); }
+.accordion ul li:nth-child(2) { background-image: url("image2.jpg"); }
+.accordion ul li:nth-child(3) { background-image: url("image3.jpg"); }
+.accordion ul li:nth-child(4) { background-image: url("image4.jpg"); }
+
+/* Эффект раскрытия */
+.accordion ul:hover li {
+    flex: 0.2; /* Уменьшаем неактивные элементы */
+}
+
+.accordion ul:hover li:hover {
+    flex: 2; /* Увеличиваем активный элемент */
+}
+
+.accordion ul:hover li:hover a {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.accordion ul:hover li:hover a h2,
+.accordion ul:hover li:hover a p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Мобильная адаптация */
+@media screen and (max-width: 600px) {
+    .accordion {
+        height: auto;
     }
 
-    .Iam b {
-        height: 40px;
+    .accordion ul {
+        flex-direction: column;
     }
 
-    @keyframes move {
-        0% { transform: translateY(0); }
-        20% { transform: translateY(-40px); }
-        40% { transform: translateY(-80px); }
-        60% { transform: translateY(-120px); }
-        80% { transform: translateY(-160px); }
+    .accordion ul li {
+        flex: none;
+        height: 300px;
     }
 }
 
@@ -190,7 +221,7 @@ button {
 
 /* Футер */
 footer {
-    background: #004d3d;
+    background: #0a0f0d;
     padding: 20px;
     height: 30px;
 }
