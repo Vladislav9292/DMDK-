@@ -309,31 +309,38 @@ main > div p {
 }
 
 /* Форма */
+/* Исходный вид формы обратной связи для десктопа */
 .contact {
-    padding: 50px;
+  padding: 50px;
+  text-align: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    margin: auto;
+.contact h2 {
+  margin-bottom: 20px;
 }
 
-input, textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+#contact-form {
+  display: flex;
+  flex-direction: column !important;
+  max-width: 300px;
+  margin: auto;
 }
 
-button {
-    background: #00c896;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    color: white;
-    font-size: 16px;
+#contact-form input,
+#contact-form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#contact-form button {
+  background: #00c896;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
 }
 
 /* Футер */
