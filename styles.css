@@ -226,7 +226,13 @@ main > div hr {
   border: none;
   margin: 1.125rem 0 1.875rem 0;
 }
-
+/* Мобильная версия */
+@media (max-width: 600px) {
+  main > div hr {
+    width: 80%;    /* или 90%, по вкусу */
+    margin: 1.125rem auto 1.875rem auto; /* отцентрировать элемент */
+  }
+}
 main > div p {
   text-transform: uppercase;
   letter-spacing: 1.5px;
