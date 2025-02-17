@@ -263,6 +263,61 @@ main > div p {
    margin: 0;
 }
 
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  /* Главный экран */
+  .hero {
+    height: auto;
+    padding: 20px;
+  }
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .cta-btn {
+    width: 80%;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  /* Всплывающий текст */
+  .Iam {
+    font-size: 24px;
+    line-height: 32px;
+    height: auto;
+    flex-direction: column;
+  }
+  .Iam b {
+    width: 90%;
+    height: 40px;
+  }
+  
+  /* Уменьшаем фиксированную ширину hr */
+  main > div hr {
+    width: 80%;
+    margin: 1.125rem auto 1.875rem auto;
+  }
+  
+  /* Основной блок main */
+  main {
+    width: 95%;
+    padding-block: 2rem;
+  }
+  
+  /* Столбцы в .row располагаются вертикально */
+  .row {
+    flex-direction: column;
+  }
+  
+  /* Текстовые блоки */
+  .text-block {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+
 .feature {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
