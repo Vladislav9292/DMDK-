@@ -245,7 +245,7 @@ main > div p {
 @media (max-width: 768px) {
   /* Главный экран */
   .hero {
-    height: auto;
+    height: 100hv;
     padding: 20px;
   }
   .hero-content h1 {
